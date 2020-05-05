@@ -143,19 +143,19 @@ body {
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
     <img src="slide1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <div class="text">Picture by Sina Eggulf</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
     <img src="slide2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+    <div class="text">Picture by Omar Corona</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
     <img src="slide3.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">Picture by Chris Barbalis</div>
   </div>
 
   <!-- Next and previous buttons -->
@@ -174,12 +174,10 @@ body {
   var slideIndex = 1;
   showSlides(slideIndex);
 
-  // Next/previous controls
   function plusSlides(n) {
     showSlides(slideIndex += n);
   }
 
-  // Thumbnail image controls
   function currentSlide(n) {
     showSlides(slideIndex = n);
   }
@@ -198,17 +196,6 @@ body {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-  }
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 </script>
 </body>
